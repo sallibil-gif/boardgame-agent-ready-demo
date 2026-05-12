@@ -1,53 +1,190 @@
 # BoardgameListingWebApp
 
-## Description 
+## Overview
 
-**Board Game Database Full-Stack Web Application.**
-This web application displays lists of board games and their reviews. While anyone can view the board game lists and reviews, they are required to log in to add/ edit the board games and their reviews. The 'users' have the authority to add board games to the list and add reviews, and the 'managers' have the authority to edit/ delete the reviews on top of the authorities of users.  
+BoardgameListingWebApp is a full-stack Spring Boot web application for managing board games and reviews with role-based authentication and authorization.
 
-## Technologies
+Users can browse board games and reviews publicly, while authenticated users can add reviews and board games. Managers have additional permissions to edit and delete reviews.
 
-- Java
-- Spring Boot
-- Amazon Web Services(AWS) EC2
-- Thymeleaf
-- Thymeleaf Fragments
-- HTML5
-- CSS
-- JavaScript
-- Spring MVC
-- JDBC
-- H2 Database Engine (In-memory)
-- JUnit test framework
-- Spring Security
-- Twitter Bootstrap
-- Maven
+---
 
 ## Features
 
-- Full-Stack Application
-- UI components created with Thymeleaf and styled with Twitter Bootstrap
+- Full-stack Spring Boot application
+- Board game listing and review management
 - Authentication and authorization using Spring Security
-  - Authentication by allowing the users to authenticate with a username and password
-  - Authorization by granting different permissions based on the roles (non-members, users, and managers)
-- Different roles (non-members, users, and managers) with varying levels of permissions
-  - Non-members only can see the boardgame lists and reviews
-  - Users can add board games and write reviews
-  - Managers can edit and delete the reviews
-- Deployed the application on AWS EC2
-- JUnit test framework for unit testing
-- Spring MVC best practices to segregate views, controllers, and database packages
-- JDBC for database connectivity and interaction
-- CRUD (Create, Read, Update, Delete) operations for managing data in the database
-- Schema.sql file to customize the schema and input initial data
-- Thymeleaf Fragments to reduce redundancy of repeating HTML elements (head, footer, navigation)
+- Role-based access control
+- CRUD operations for board games and reviews
+- Thymeleaf-based UI with Bootstrap styling
+- AWS EC2 deployment
+- JUnit testing support
+- MVC layered architecture
+- H2 in-memory database
+## Development Workflow
 
-## How to Run
+1. Create feature branch
+2. Implement changes
+3. Run tests
+4. Submit pull request
+---
 
-1. Clone the repository
-2. Open the project in your IDE of choice
-3. Run the application
-4. To use initial user data, use the following credentials.
-  - username: bugs    |     password: bunny (user role)
-  - username: daffy   |     password: duck  (manager role)
-5. You can also sign-up as a new user and customize your role to play with the application! 😊
+## User Roles
+
+### Non-Members
+- View board games
+- View reviews
+
+### Users
+- Add board games
+- Add reviews
+
+### Managers
+- Edit reviews
+- Delete reviews
+
+---
+
+## Technology Stack
+
+### Backend
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Security
+- JDBC
+
+### Frontend
+- Thymeleaf
+- HTML5
+- CSS
+- JavaScript
+- Bootstrap
+
+### Database
+- H2 Database Engine
+
+### Testing
+- JUnit
+
+### Deployment
+- AWS EC2
+
+---
+
+## Project Structure
+
+```text
+src/
+ ├── controllers/
+ ├── services/
+ ├── repositories/
+ ├── templates/
+ ├── static/
+ └── tests/
+```
+
+- controllers → request handling
+- services → business logic
+- repositories → database interaction
+- templates → Thymeleaf UI
+- static → CSS/JavaScript assets
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Java 17+
+- Maven
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd BoardgameListingWebApp
+```
+
+### Build Application
+
+```bash
+mvn clean install
+```
+
+### Run Application
+
+```bash
+mvn spring-boot:run
+```
+
+---
+
+## Testing
+
+Run unit tests:
+
+```bash
+mvn test
+```
+
+---
+
+## Default Test Users
+
+### User Role
+- Username: bugs
+- Password: bunny
+
+### Manager Role
+- Username: daffy
+- Password: duck
+
+---
+
+## Architecture
+
+The application follows Spring MVC layered architecture:
+
+- Controller Layer
+- Service Layer
+- Repository/DAO Layer
+- Database Layer
+
+See `ARCHITECTURE.md` for detailed system design.
+
+---
+
+## Security
+
+Authentication and authorization are implemented using Spring Security.
+
+Authorization is role-based:
+- Non-members
+- Users
+- Managers
+
+---
+
+## Deployment
+
+The application can be deployed on:
+- AWS EC2
+- Docker containers
+- Cloud platforms supporting Java/Spring Boot
+
+---
+
+## Contribution
+
+See `CONTRIBUTING.md` for contribution guidelines.
+
+---
+
+## Agentic Development
+
+This repository includes:
+- `AGENTS.md` → AI agent guidance
+- `skills/` → reusable AI workflows
+- `ARCHITECTURE.md` → system architecture documentation
+
+These files improve AI-assisted development workflows.
