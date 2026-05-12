@@ -187,4 +187,10 @@ This repository includes:
 - `skills/` → reusable AI workflows
 - `ARCHITECTURE.md` → system architecture documentation
 
+## Documentation
+
+- AGENTS.md
+- ARCHITECTURE.md
+- CONTRIBUTING.md
+- AGENTIC_SDLC_WORKFLOW.md
 These files improve AI-assisted development workflows.
