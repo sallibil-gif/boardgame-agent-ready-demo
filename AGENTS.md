@@ -1,6 +1,4 @@
 # AGENTS.md
-# AGENTS.md
-
 ## Purpose
 
 This repository contains a Spring Boot full-stack web application for managing board games and reviews with role-based authentication and authorization.
